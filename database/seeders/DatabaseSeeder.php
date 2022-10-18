@@ -23,6 +23,7 @@ class DatabaseSeeder extends Seeder
         
         $this->call([
             ReviewpostSeeder::class,
+            TagSeeder::class,
         ]);
     }
 }

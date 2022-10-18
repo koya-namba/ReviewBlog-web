@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateReviewpostsTable extends Migration
+return new class extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,9 @@ class CreateReviewpostsTable extends Migration
      */
     public function up()
     {
-        Schema::create('reviewposts', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('title', 50); //タイトル
-            $table->string('body', 200); //本文
-            $table->integer('tag_id')->unsigned();  // 問題5：追加準備
+        Schema::create('tags', function (Blueprint $table) {
+            $table->id();
+            $table->string('name', 50);
             $table->timestamps();
         });
     }
@@ -29,6 +27,6 @@ class CreateReviewpostsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('reviewposts');
+        Schema::dropIfExists('tags');
     }
-}
+};
