@@ -15,3 +15,11 @@ use App\Http\Controllers\ReviewpostController;
 */
 
 Route::get('/', [ReviewpostController::class, 'index']);
+
+// 問題1
+// /testにアクセスされたらReviewpostControllerのindexTextメソッドが呼び出されるように定義する
+Route::get('/test', [ReviewpostController::class, 'indexText']);
+
+// 問題4
+// 条件に合うようにルーティングを定義しましょう
+Route::get('/text/{post}', [ReviewpostController::class, 'showText']);
