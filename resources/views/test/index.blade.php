@@ -16,7 +16,7 @@
                     <h2 class='title'>
                         <!--問3：nameをtitleに変更-->
                         <!--問4：詳細ページに飛ぶルーティングに変えましょう-->
-                        <a href="/text/{{ $post->id }}">{{ $post->title }}</a>
+                        <a href="/test/{{ $post->id }}">{{ $post->title }}</a>
                     </h2>
                     <p class='body'>{{ $post->body }}</p>
                 </div>

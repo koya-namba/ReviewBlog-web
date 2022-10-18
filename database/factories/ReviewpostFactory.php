@@ -22,6 +22,7 @@ class ReviewpostFactory extends Factory
             'body' => $this ->faker->realText(100),
             'created_at' => $this ->faker->date('Y-m-d H:i:s', 'now'),
             'updated_at' => $this ->faker->date('Y-m-d H:i:s', 'now'),
+            'tag_id' => 2,  // 問題5：追加準備
         ];
     }
 }

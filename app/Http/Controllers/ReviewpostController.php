@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 // 問2：Reviewpostを読み込む
 use App\Models\Reviewpost;
+// 問5：Tagを読み込む
+use App\Models\Tag;
+
 
 // 問2：同じクラス名は使えない．
 class ReviewpostController extends Controller
@@ -30,5 +33,12 @@ class ReviewpostController extends Controller
     public function showText(Reviewpost $post)
     {
         return view('test/show')->with(['post' => $post]);
+    }
+    
+    // 問5
+    // legendメソッドを完成させなさい
+    public function legend(Reviewpost $post, Tag $tag)
+    {
+        return view('test/legend')->with(['post' => $post, 'tag' => $tag]);
     }
 }

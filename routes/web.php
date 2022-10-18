@@ -22,4 +22,8 @@ Route::get('/test', [ReviewpostController::class, 'indexText']);
 
 // 問題4
 // 条件に合うようにルーティングを定義しましょう
-Route::get('/text/{post}', [ReviewpostController::class, 'showText']);
+Route::get('/test/{post}', [ReviewpostController::class, 'showText']);
+
+// 問題5
+// ルーティングを定義しましょう。（「(ルーティングを書く)」と書かれている部分を変えましょう）
+Route::get('/test/{post}/tags/{tag}', [ReviewpostController::class, 'legend']);
